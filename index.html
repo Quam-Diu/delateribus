@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Blog</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Cargar p5.js desde CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-  <script src="sketch.js"></script>
+  <meta charset="UTF-8" />
+  <title>De Lateribus - Red Sutil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Animación sutil de red de nodos con p5.js" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Opcional: estilos mínimos si no usas style.css */
+    :root { color-scheme: light dark; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+      background: #0f1116; color: #e6e8ef;
+    }
+    header, main { max-width: 980px; margin: auto; padding: 1.25rem; }
+    header h1 { margin: 0 0 .25rem 0; font-weight: 700; letter-spacing: .2px; }
+    header p { margin: 0; opacity: .8; }
+    #canvas-wrap { border-radius: 10px; overflow: hidden; border: 1px solid rgba(230,232,239,.08); }
+    .hint { font-size: .9rem; opacity: .7; margin-top: .5rem; }
+  </style>
+
+  <!-- p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script defer src="sketch.js"></script>
 </head>
 <body>
-  <h1>Sitio web sobre Lego</h1>
+  <header>
+    <h1>De Lateribus</h1>
+    <p>Red de nodos sutil con p5.js</p>
+  </header>
 
+  <main>
+    <div id="canvas-wrap"></div>
+    <p class="hint">Pasa el cursor para resaltar cercanías. La red respira suavemente.</p>
+  </main>
 </body>
 </html>
+
